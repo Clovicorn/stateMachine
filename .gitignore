@@ -4,3 +4,7 @@ Testing/*
 *.cmake
 build.ninja
 *.tcl
+.ninja_deps
+.ninja_log
+*.o
+stateMachine

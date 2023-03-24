@@ -1,5 +1,5 @@
 #include "game.hpp"
-#include "splashState.hpp"
+#include "states/splashState.hpp"
 namespace Clovicorn
 {
     Game::Game(int width, int height, std::string title)

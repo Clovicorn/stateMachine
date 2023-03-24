@@ -5,8 +5,8 @@
 #include <iostream>
 
 #include "state.hpp"
-#include "game.hpp"
-#include "definitions.hpp"
+#include "../game.hpp"
+#include "../definitions.hpp"
 
 using namespace sf;
 namespace Clovicorn

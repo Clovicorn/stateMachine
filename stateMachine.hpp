@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 #include <stack>
-#include "state.hpp"
+#include "states/state.hpp"
 
 namespace Clovicorn
 {

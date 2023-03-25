@@ -11,10 +11,10 @@
 using namespace sf;
 namespace Clovicorn
 {
-    class SplashState : public State
+    class MainMenuState : public State
     {
     public:
-        SplashState(gameDataRef data);
+        MainMenuState(gameDataRef data);
         void init();
         void handleInput();
         void update(float dt);
@@ -26,6 +26,5 @@ namespace Clovicorn
         Clock _clock;
         Texture _backgroundTex;
         Sprite _backgroundSprite;
-        Text _splashText;
     };
 }

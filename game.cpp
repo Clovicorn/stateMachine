@@ -43,4 +43,9 @@ namespace Clovicorn
             this->_data->machine.getActiveState()->draw(interpolation);
         }
     }
+
+    void Game::setDt(int fps)
+    {
+        dt = 1.0f / fps;
+    }
 }

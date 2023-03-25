@@ -20,6 +20,7 @@ namespace Clovicorn
         RenderWindow window;
         AssetManager assets;
         InputManager inputs;
+        float fps = FPS;
     };
 
     typedef std::shared_ptr<gameData> gameDataRef;
@@ -28,10 +29,11 @@ namespace Clovicorn
     {
     public:
         Game(int width, int height, std::string title);
+        void setDt(int fps);
         // ~Game();
 
     private:
-        const float dt = 1.0f / FPS;
+        float dt = 1.0f / FPS;
         Clock _clock;
         gameDataRef _data = std::make_shared<gameData>();
 

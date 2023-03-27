@@ -15,6 +15,7 @@ add_executable(stateMachine
     inputManager.hpp
     main.hpp
     stateMachine.hpp
+    states/characterCreationState.hpp
     states/mainMenuState.hpp
     states/splashState.hpp
     states/state.hpp
@@ -24,6 +25,7 @@ add_executable(stateMachine
     inputManager.cpp
     main.cpp
     stateMachine.cpp
+    states/characterCreationState.cpp
     states/mainMenuState.cpp
     states/splashState.cpp
     

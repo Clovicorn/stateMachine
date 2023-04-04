@@ -6,7 +6,6 @@ namespace Clovicorn
     {
         _data->window.create(VideoMode(width, height), title, Style::Fullscreen);
         _data->machine.addState(stateRef(new SplashState(this->_data)));
-
         this->run();
     }
 

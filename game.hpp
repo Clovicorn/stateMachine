@@ -5,10 +5,12 @@
 #include <SFML/Graphics.hpp>
 
 #include "definitions.hpp"
+#include "enumsStructs.hpp"
 
 #include "stateMachine.hpp"
 #include "assetManager.hpp"
 #include "inputManager.hpp"
+#include "characters/player.hpp"
 
 using namespace sf;
 
@@ -20,11 +22,10 @@ namespace Clovicorn
         RenderWindow window;
         AssetManager assets;
         InputManager inputs;
+        Player player;
         float fps = FPS;
     };
-
     typedef std::shared_ptr<gameData> gameDataRef;
-
     class Game
     {
     public:

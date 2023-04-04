@@ -10,9 +10,12 @@ enable_testing()
 
 add_executable(stateMachine 
     assetManager.hpp
+    characters/character.hpp
+    characters/player.hpp
     definitions.hpp
     game.hpp
     inputManager.hpp
+    items/item.hpp
     main.hpp
     stateMachine.hpp
     states/characterCreationState.hpp
@@ -21,8 +24,11 @@ add_executable(stateMachine
     states/state.hpp
     
     assetManager.cpp
+    characters/character.cpp
+    characters/player.cpp
     game.cpp
     inputManager.cpp
+    items/item.cpp
     main.cpp
     stateMachine.cpp
     states/characterCreationState.cpp

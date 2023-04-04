@@ -22,6 +22,18 @@ namespace Clovicorn
         void draw(float dt);
 
     private:
+        bool _buttonLeftPressed = false;
+        bool _buttonRightPressed = false;
+        float _screenWidth;
+        float _screenHeight;
+        float _currentWidthPercent;
+        float _currentHeightPercent;
         gameDataRef _data;
+        Sprite _addSubSprites[12];
+        Sprite _bgSprite;
+        Text stregthText;
+
+        View _hudView;
+        View _bgView;
     };
 }

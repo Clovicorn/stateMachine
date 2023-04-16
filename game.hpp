@@ -31,9 +31,11 @@ namespace Clovicorn
     public:
         Game(int width, int height, std::string title);
         void setDt(int fps);
-        // ~Game();
+        ~Game();
 
     private:
+        int origWidth;
+        int origHeight;
         float dt = 1.0f / FPS;
         Clock _clock;
         gameDataRef _data = std::make_shared<gameData>();

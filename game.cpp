@@ -4,6 +4,13 @@ namespace Clovicorn
 {
     Game::Game(int width, int height, std::string title)
     {
+        origWidth = width;
+        origHeight = height;
+        if (width > 1920)
+        {
+            width = 1920;
+            height = 1080;
+        }
         _data->window.create(VideoMode(width, height), title, Style::Fullscreen);
         _data->machine.addState(stateRef(new SplashState(this->_data)));
         this->run();
@@ -46,5 +53,10 @@ namespace Clovicorn
     void Game::setDt(int fps)
     {
         dt = 1.0f / fps;
+    }
+
+    Game::~Game()
+    {
+        _data->window.setSize(Vector2u(origWidth, origHeight));
     }
 }

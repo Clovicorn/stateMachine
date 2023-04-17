@@ -18,14 +18,15 @@ namespace Clovicorn
         //_data->assets.loadFont("ccMenu", CCMENU_FONT_FILEPATH);
         std::cout << "start of loading textures\n";
         _data->assets.loadTexture("ccMenuBG", CCMENU_BACKGROUND_FILEPATH);
-        _data->assets.loadTexture("player", TEST_PLAYER);
-
-        _data->player.setSprite(_data->assets.getTexture("player"));
-        _data->player.setPosition(Vector2f(_data->window.getSize().x / 2, _data->window.getSize().y / 2));
+        _data->assets.loadTexture("classBG", CLASS_BACKGROUND_FILEPATH);
 
         _bgSprite.setTexture(_data->assets.getTexture("ccMenuBG"));
         _bgSprite.setScale(Vector2f(_currentWidthPercent, _currentHeightPercent));
         _bgSprite.setPosition(Vector2f(0, 0));
+
+        _classBGSprite.setTexture(_data->assets.getTexture("classBG"));
+        _classBGSprite.setScale(Vector2f(_currentWidthPercent, _currentHeightPercent));
+        _classBGSprite.setPosition(Vector2f((702 * _currentWidthPercent), (83 * _currentHeightPercent)));
     }
 
     void CharacterCreationState::handleInput()
@@ -72,6 +73,7 @@ namespace Clovicorn
         _data->window.clear();
         _data->window.setView(_hudView);
         _data->window.draw(_bgSprite);
+        _data->window.draw(_classBGSprite);
 
         _data->window.draw(_data->player.getSprite());
         _data->window.display();

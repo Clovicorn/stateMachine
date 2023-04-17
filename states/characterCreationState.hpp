@@ -31,6 +31,7 @@ namespace Clovicorn
         gameDataRef _data;
         Sprite _addSubSprites[12];
         Sprite _bgSprite;
+        Sprite _classBGSprite;
         Text stregthText;
 
         View _hudView;
